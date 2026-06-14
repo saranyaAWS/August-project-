@@ -43,7 +43,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-creds') {
                         docker.image("saranya751/devops-backend:latest").push()
-                        docker.image("saranya751devops-frontend:latest").push()
+                        docker.image("saranya751/devops-frontend:latest").push()
                     }
                 }
             }
