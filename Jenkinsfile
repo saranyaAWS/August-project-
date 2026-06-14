@@ -8,14 +8,14 @@ pipeline {
     stages {
         stage('Checkout Code from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/anbolimohan-03/Devops--Project--Login360.git'
+                git branch: 'main', url: 'https://github.com/saranyaAWS/CI-CD-PIPELINE-.git'
             }
         }
 
         stage('Build Backend Image') {
             steps {
                 script {
-                    docker.build("anboli03/devops-backend:latest", "./backend")
+                    docker.build("saranya751/devops-backend:latest", "./backend")
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
         stage('Build Frontend Image') {
             steps {
                 script {
-                    docker.build("anboli03/devops-frontend:latest", "./frontend")
+                    docker.build("saranya751/devops-frontend:latest", "./frontend")
                 }
             }
         }
@@ -42,8 +42,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-creds') {
-                        docker.image("anboli03/devops-backend:latest").push()
-                        docker.image("anboli03/devops-frontend:latest").push()
+                        docker.image("saranya751/devops-backend:latest").push()
+                        docker.image("saranya751devops-frontend:latest").push()
                     }
                 }
             }
