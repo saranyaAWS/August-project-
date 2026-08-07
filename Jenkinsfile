@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout Code from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/saranyaAWS/CI-CD-PIPELINE-.git'
+                git branch: 'main', url: 'https://github.com/saranyaAWS/August-project-.git'
             }
         }
 
