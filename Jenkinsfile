@@ -19,7 +19,7 @@ pipeline{
       }
       stage('deploy'){
         steps{
-            'java -jar target/Java-1.0-SNAPSHOT.jar'
+            sh 'java -jar target/Java-1.0-SNAPSHOT.jar'
         }
       }
     }
